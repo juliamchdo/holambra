@@ -2,7 +2,9 @@
   <nav class="navigation">
     <i class="nav-brand"></i>
     <ul class="nav-items-group">
-      <li class="nav-items" *ngFor="let item of navItems">{{item.title}}</li>
+      <li class="nav-items" *ngFor="let item of navItems">
+        <a class="nav-link">{{item.title}}</a>
+      </li>
     </ul>
   </nav>
 </div>

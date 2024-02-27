@@ -30,6 +30,10 @@
         letter-spacing: .1rem;
         text-transform: uppercase;
         color: white;
+
+        .nav-link{
+          cursor: pointer;
+        }
       }
     }
   }
