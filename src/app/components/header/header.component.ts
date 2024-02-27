@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ButtonProps } from 'src/app/types/button/button.types';
 import { NavItems } from 'src/app/types/header/header.types';
 
 @Component({
@@ -14,7 +15,9 @@ export class HeaderComponent implements OnInit {
     {title: 'Cronograma', goTo: 'schedule'},
     {title: 'Premiação', goTo: 'award'},
     {title: 'Regulamento', goTo: 'rules'},
-  ]
+  ];
+
+  buttonProps: ButtonProps = {text: 'Inscreva-se', type: 'default'}
 
   constructor() { }
 
