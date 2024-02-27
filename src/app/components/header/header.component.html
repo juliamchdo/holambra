@@ -1,3 +1,8 @@
 <div class="header-container">
-
+  <nav class="navigation">
+    <i class="nav-brand"></i>
+    <ul class="nav-items-group">
+      <li class="nav-items" *ngFor="let item of navItems">{{item.title}}</li>
+    </ul>
+  </nav>
 </div>

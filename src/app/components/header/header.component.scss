@@ -1,3 +1,36 @@
-.header-container{
+.header-container {
+  width: 100%;
+  height: 90vh;
+  background-image: url("../../../assets/images/background.svg");
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
+  .navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+    gap: 15rem;
+
+    .nav-brand {
+      width: 35rem;
+      height: 8rem;
+      background-image: url("../../../assets//icons/logo_holambra_telescope.svg");
+      background-repeat: no-repeat;
+    }
+    .nav-items-group {
+      display: flex;
+      gap: 1rem;
+
+      .nav-items {
+        list-style: none;
+        font-size: 1.0rem;
+        font-weight: 550;
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+        color: white;
+      }
+    }
+  }
 }
