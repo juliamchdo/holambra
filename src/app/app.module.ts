@@ -8,6 +8,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { ChallengesComponent } from './components/challenges/challenges.component';
 import { AwardsComponent } from './components/awards/awards.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
+import { SubscribeFormComponent } from './components/subscribe-form/subscribe-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ScheduleComponent } from './components/schedule/schedule.component';
     ButtonComponent,
     ChallengesComponent,
     AwardsComponent,
-    ScheduleComponent
+    ScheduleComponent,
+    SubscribeFormComponent
   ],
   imports: [
     BrowserModule,
