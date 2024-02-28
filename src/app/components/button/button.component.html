@@ -1,3 +1,3 @@
-<button class="button" [class]="buttonProps.type">
+<button class="button" [class]="[buttonProps.type, buttonProps?.size]">
   {{buttonProps.text}}
 </button>

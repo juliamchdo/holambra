@@ -1,1 +1,16 @@
-<p>awards works!</p>
+<section class="award-container">
+    <h1 class="title">Premiação</h1>
+
+    <div class="prizes">
+
+        <div class="prize-item" *ngFor="let prize of prizeItems">
+            <i [class]="prize.iconClass"></i>
+            <h2 class="place">{{prize.place}}</h2>
+            <p class="value">{{prize.value}}</p>
+        </div>    
+    </div>
+    <div class="actions">
+        <app-button [buttonProps]="rule"></app-button>
+        <app-button [buttonProps]="subscribe"></app-button>
+    </div>
+</section>
