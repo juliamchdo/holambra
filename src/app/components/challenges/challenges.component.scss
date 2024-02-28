@@ -1,0 +1,88 @@
+.challenges-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+
+  .challenges-content{
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    .title{
+      color: rgb(0, 50, 98);
+      text-transform: uppercase;
+      font-size: 3.2rem;
+      font-weight: 900;
+    }
+
+    .subtitle{
+      font-size: 1.2rem;
+      line-height: 2rem;
+    }
+
+    .challenges-items{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0 6rem;
+
+      .item{
+        width: 45%;
+        display: flex;
+        align-items: flex-start;
+        margin-top: 2rem;
+        gap: 1rem;
+
+        .icon{
+          width: 5rem;
+          height: 5rem;
+          display: flex;
+          .management{
+            width: 5rem;
+            height: 5rem;
+            background-image: url("../../../assets//icons//ico_desafio1.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+          .bioproducts{
+            width: 5rem;
+            height: 5rem;
+            background-image: url("../../../assets//icons//ico_desafio3.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+          .monitoring{
+            width: 5rem;
+            height: 5rem;
+            background-image: url("../../../assets//icons//ico_desafio2.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+          .machines{
+            width: 5rem;
+            height: 5rem;
+            background-image: url("../../../assets//icons//ico_desafio4.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
+
+        .item-title{
+          color:  rgb(0, 50, 98);
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+
+  .highlight{
+    color: rgb(66, 192, 182);;
+  }
+
+}
