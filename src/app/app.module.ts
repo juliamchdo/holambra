@@ -10,6 +10,7 @@ import { AwardsComponent } from './components/awards/awards.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
 import { SubscribeFormComponent } from './components/subscribe-form/subscribe-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { InputComponent } from './components/input/input.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ChallengesComponent,
     AwardsComponent,
     ScheduleComponent,
-    SubscribeFormComponent
+    SubscribeFormComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
