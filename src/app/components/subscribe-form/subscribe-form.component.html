@@ -1,3 +1,16 @@
-<form [formGroup]="subscribeForm" (ngSubmit)="submitForm()">
-
-</form>
+<div class="form" [formGroup]="subscribeForm" (ngSubmit)="submitForm()">
+    <h1 class="title">Faça sua inscrição</h1>
+    <div class="form-group">
+        <input class="input-form" type="text" placeholder="Nome" formControlName="name" />
+        <input class="input-form" type="text" placeholder="Sobrenome" formControlName="lastname" />
+        <input class="input-form" type="email" placeholder="Email" formControlName="email" />
+        <input class="input-form" type="number" placeholder="Telefone" formControlName="phone" />
+        <input class="input-form" type="number" placeholder="CEP" formControlName="cep" />
+        <input class="input-form" type="text" placeholder="Endereço" formControlName="address" />
+        <input class="input-form" type="text" placeholder="Bairro" formControlName="neighborhood" />
+        <input class="input-form" type="text" placeholder="Complemento" formControlName="complement" />
+        <input class="input-form" type="select" placeholder="Cidade" formControlName="city" />
+        <input class="input-form" type="select" placeholder="Estado" formControlName="state" />
+    </div>
+    <app-button [buttonProps]="subscribe"></app-button>
+</div>
