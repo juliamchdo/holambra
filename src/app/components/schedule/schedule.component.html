@@ -1,0 +1,11 @@
+<section class="schedule-container">
+    <h1 class="title">Cronograma</h1>
+    
+    <div class="schedule-items">
+        <div class="item" *ngFor="let item of scheduleItems">
+            <span class="date">{{item.date}}</span>
+            <div class="separator"></div>
+            <p class="description">{{item.text}}</p>
+        </div>
+    </div>
+</section>
