@@ -16,7 +16,6 @@ export class ButtonComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log('props', this.buttonProps)
   }
 
 }
