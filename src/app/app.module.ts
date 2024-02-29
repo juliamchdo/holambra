@@ -11,7 +11,8 @@ import { ScheduleComponent } from './components/schedule/schedule.component';
 import { SubscribeFormComponent } from './components/subscribe-form/subscribe-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
-import { FooterComponent } from './components/footer/footer.component'
+import { FooterComponent } from './components/footer/footer.component';
+import { ScrollUpComponent } from './components/scroll-up/scroll-up.component'
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FooterComponent } from './components/footer/footer.component'
     ScheduleComponent,
     SubscribeFormComponent,
     FooterComponent,
+    ScrollUpComponent,
   ],
   imports: [
     BrowserModule,

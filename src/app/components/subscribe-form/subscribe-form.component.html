@@ -1,4 +1,4 @@
-<form class="form" [formGroup]="subscribeForm" (ngSubmit)="submitForm()">
+<form class="form" [formGroup]="subscribeForm" (ngSubmit)="submitForm()" id="subscribe">
     <h1 class="title">Faça sua inscrição</h1>
     <div class="form-group">
         <div class="input-form">
@@ -44,4 +44,5 @@
         </div>
         <app-button class="form-button" *ngIf="buttonProps" [buttonProps]="buttonProps"></app-button>
     </div>
+    <app-scroll-up></app-scroll-up>
 </form>

@@ -1,9 +1,9 @@
-<div class="header-container">
+<div class="header-container" id="header">
   <nav class="navigation">
     <i class="nav-brand"></i>
     <ul class="nav-items-group">
       <li class="nav-items" *ngFor="let item of navItems">
-        <a class="nav-link">{{item.title}}</a>
+        <a class="nav-link" (click)="scrollIntoView(item.goTo)">{{item.title}}</a>
       </li>
     </ul>
   </nav>

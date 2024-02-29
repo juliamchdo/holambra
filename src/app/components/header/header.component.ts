@@ -19,6 +19,11 @@ export class HeaderComponent implements OnInit {
 
   buttonProps: ButtonProps = {text: 'Inscreva-se', type: 'default'}
 
+  scrollIntoView(id: string){
+    const section = document.querySelector(`#${id}`);
+    section?.scrollIntoView({ behavior: 'smooth' });
+  }
+
   constructor() { }
 
   ngOnInit(): void {
