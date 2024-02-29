@@ -13,7 +13,6 @@
     }
 
     .prizes {
-        width: 50%;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -77,5 +76,51 @@
         border-top: 2px solid #E7ECF2;
         border-radius: 1rem;
         margin-top: 10rem;
+    }
+}
+
+@media screen and (max-width: 515px) {
+    .award-container{
+        .prizes{
+            flex-direction: column;
+        }
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+}
+
+
+@media screen and (min-width: 516x) and (max-width: 594px) {
+    .award-container{
+        .prizes{
+            width: 90%;
+        }
+    }
+}
+
+@media screen and (min-width: 595px) and (max-width: 719px) {
+    .award-container{
+        .prizes{
+            width: 80%;
+        }
+    }
+}
+
+@media screen and (min-width: 720px) and (max-width: 949px){
+    .award-container{
+        .prizes{
+            width: 70%;
+        }
+    }
+}
+
+
+@media screen and (min-width: 950px) {
+    .award-container{
+        .prizes{
+            width: 50%;
+        }
     }
 }
