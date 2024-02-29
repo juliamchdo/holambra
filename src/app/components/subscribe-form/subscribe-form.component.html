@@ -1,44 +1,47 @@
-<form class="form" [formGroup]="subscribeForm" (ngSubmit)="submitForm()" id="subscribe">
+<form class="form" [formGroup]="subscribeForm" (ngSubmit)="submitForm()" #formDir="ngForm" id="subscribe">
     <h1 class="title">Faça sua inscrição</h1>
     <div class="form-group">
         <div class="input-form">
-            <input type="text" placeholder="Nome" formControlName="name" />
+            <input type="text" placeholder="Nome" required formControlName="name" />
+            <span class="invalid" *ngIf="name.invalid && formDir.submitted">Por favor insira o seu nome.</span>
         </div>
 
         <div class="input-form">
             <input type="text" placeholder="Sobrenome" formControlName="lastName" />
+            <span class="invalid" *ngIf="lastName.invalid && formDir.submitted">Por favor insira o seu sobrenome.</span>
         </div>
 
         <div class="input-form">
-            <input type="email" placeholder="Email" formControlName="email" />
-            <span class="invalid" *ngIf="invalidEmail()">Por favor coloque um email válido.</span>
+            <input type="email" placeholder="Email" required formControlName="email" />
+            <span class="invalid" *ngIf="invalidEmail() || email.invalid && formDir.submitted">Por favor coloque um email válido.</span>
         </div>
-        
+
         <div class="input-form">
-            <input type="text" mask="(00) 000000000" placeholder="Telefone" formControlName="phone" />
-            <span class="invalid" *ngIf="invalidPhone()">Por favor coloque o seu telefone.</span>
+            <input type="text" mask="(00) 000000000" required placeholder="Telefone" formControlName="phone" />
+            <span class="invalid" *ngIf="phone.invalid && formDir.submitted">Por favor coloque o seu telefone.</span>
         </div>
-        
+
         <div class="input-form">
             <input type="number" placeholder="CEP" formControlName="cep" (blur)="findCep(subscribeForm.get('cep')?.value)" />
+            <span class="invalid" *ngIf="InvalidCep">Não foi possível encontrar um endereço válido.</span>
         </div>
-        
+
         <div class="input-form">
             <input type="text" placeholder="Endereço" formControlName="address" />
         </div>
-        
+
         <div class="input-form">
             <input type="text" placeholder="Bairro" formControlName="neighborhood" />
         </div>
-        
+
         <div class="input-form">
             <input type="text" placeholder="Complemento" formControlName="complement" />
         </div>
-        
+
         <div class="input-form">
             <input type="text" placeholder="Cidade" formControlName="city" />
         </div>
-        
+
         <div class="input-form">
             <input type="text" placeholder="Estado" formControlName="state" />
         </div>

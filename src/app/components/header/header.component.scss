@@ -35,6 +35,11 @@
         .nav-link {
           cursor: pointer;
         }
+
+        .nav-link:hover{
+          color: rgb(0, 50, 98);
+          transition: .5s;
+        }
       }
     }
   }
