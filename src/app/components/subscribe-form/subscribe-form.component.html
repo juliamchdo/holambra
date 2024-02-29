@@ -23,7 +23,7 @@
 
         <div class="input-form">
             <input type="number" placeholder="CEP" formControlName="cep" (blur)="findCep(subscribeForm.get('cep')?.value)" />
-            <span class="invalid" *ngIf="InvalidCep">Não foi possível encontrar um endereço válido.</span>
+            <span class="invalid" *ngIf="invalidCep">Não foi possível encontrar um endereço válido.</span>
         </div>
 
         <div class="input-form">

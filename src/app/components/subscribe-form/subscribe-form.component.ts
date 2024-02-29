@@ -10,7 +10,7 @@ import { ButtonProps } from 'src/app/types/button/button.types';
 })
 export class SubscribeFormComponent implements OnInit {
 
-  InvalidCep = false;
+  invalidCep = false;
 
   buttonProps: ButtonProps = { text: 'Enviar', type: 'secondary' }
 
@@ -59,7 +59,7 @@ findCep(cep: string){
 }
 
 fillFormFields(cep: any){
-  if(Object.values(cep).length === 0) this.InvalidCep = true;
+  if(Object.values(cep).length === 0) this.invalidCep = true;
 
   this.subscribeForm.get('address')?.setValue(cep.logradouro);
   this.subscribeForm.get('city')?.setValue(cep.localidade);
@@ -73,7 +73,9 @@ invalidEmail(){
   return !re.test(email) && this.subscribeForm.get('email')?.touched
 }
 
-async submitForm(){
-
+submitForm(){
+  if(this.subscribeForm.valid){
+    window.alert('Formulário enviado com sucesso!')
+  }
 }
 }
