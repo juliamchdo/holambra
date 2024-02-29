@@ -50,3 +50,14 @@
         }
     }
 }
+
+@media screen and (max-width: 935px) {
+    .form{
+        .form-group{
+            width: 70%;
+            .input-form{
+                width: 45%;
+            }
+        }
+    }
+}
