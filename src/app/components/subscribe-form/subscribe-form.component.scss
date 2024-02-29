@@ -22,12 +22,24 @@
 
         .input-form{
             width: 35%;
-            padding: 1rem;
             display: flex;
+            flex-direction: column;
             flex-grow: 1;
-            border: 1px solid #CBCBCB;
-            opacity: 1;
+            input{
+                padding: 1rem;
+                border: 1px solid #CBCBCB;
+                opacity: 1;
+            }
+
+            .invalid{
+                margin-top: .5rem;
+                color: red;
+                font-size: 1.2rem;
+                font-weight: 300;
+            }
+
         }
+        
         .input-form::placeholder{
             color: #CBCBCB;
             opacity: 1;

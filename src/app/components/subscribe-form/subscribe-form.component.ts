@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
-import { DropDownService } from 'src/app/service/drop-down.service';
 import { FindCepService } from 'src/app/service/find-cep.service';
 import { ButtonProps } from 'src/app/types/button/button.types';
 
@@ -26,14 +25,11 @@ subscribeForm = new FormGroup({
   state: new FormControl(''),
 })
 
-constructor(private cepService: FindCepService, private dropDown: DropDownService) { }
+constructor(private cepService: FindCepService) { }
 
-ngOnInit(): void {
-
-}
+ngOnInit(): void {}
 
 findCep(cep: string){
-  console.log(cep)
   if (cep !== null) {
     this.cepService.findCep(cep)
       .subscribe(res => this.fillFormFields(res))
@@ -45,6 +41,16 @@ fillFormFields(cep: any){
   this.subscribeForm.get('city')?.setValue(cep.localidade);
   this.subscribeForm.get('state')?.setValue(cep.uf);
   this.subscribeForm.get('neighborhood')?.setValue(cep.bairro);
+}
+
+invalidPhone(){
+  return this.subscribeForm.get('phone')?.invalid && this.subscribeForm.get('phone')?.touched
+}
+
+invalidEmail(){
+  const re = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+  const email = this.subscribeForm.get('email')?.value
+  return !re.test(email) && this.subscribeForm.get('email')?.touched
 }
 
 submitForm(){

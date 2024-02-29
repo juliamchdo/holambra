@@ -10,6 +10,7 @@ import { AwardsComponent } from './components/awards/awards.component';
 import { ScheduleComponent } from './components/schedule/schedule.component';
 import { SubscribeFormComponent } from './components/subscribe-form/subscribe-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxMaskModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
