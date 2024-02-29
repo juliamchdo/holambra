@@ -53,7 +53,5 @@ invalidEmail(){
   return !re.test(email) && this.subscribeForm.get('email')?.touched
 }
 
-submitForm(){
-
-}
+submitForm(){}
 }
