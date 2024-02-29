@@ -5,12 +5,12 @@
         <input class="input-form" type="text" placeholder="Sobrenome" formControlName="lastName" />
         <input class="input-form" type="email" placeholder="Email" formControlName="email" />
         <input class="input-form" type="number" placeholder="Telefone" formControlName="phone" />
-        <input class="input-form" type="number" placeholder="CEP" formControlName="cep" />
+        <input class="input-form" type="number" placeholder="CEP" formControlName="cep" (blur)="findCep(subscribeForm.get('cep')?.value)" />
         <input class="input-form" type="text" placeholder="Endereço" formControlName="address" />
         <input class="input-form" type="text" placeholder="Bairro" formControlName="neighborhood" />
         <input class="input-form" type="text" placeholder="Complemento" formControlName="complement" />
-        <input class="input-form" type="select" placeholder="Cidade" formControlName="city" />
-        <input class="input-form" type="select" placeholder="Estado" formControlName="state" />
+        <input class="input-form" type="text" placeholder="Cidade" formControlName="city" />
+        <input class="input-form" type="text" placeholder="Estado" formControlName="state" />
         <app-button class="form-button" *ngIf="buttonProps" [buttonProps]="buttonProps"></app-button>
     </div>
 </form>

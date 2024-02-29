@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { DropDownService } from 'src/app/service/drop-down.service';
+import { FindCepService } from 'src/app/service/find-cep.service';
 import { ButtonProps } from 'src/app/types/button/button.types';
 
 @Component({
@@ -9,27 +11,43 @@ import { ButtonProps } from 'src/app/types/button/button.types';
 })
 export class SubscribeFormComponent implements OnInit {
 
-  buttonProps: ButtonProps = {text: 'Enviar', type: 'secondary'}
+  buttonProps: ButtonProps = { text: 'Enviar', type: 'secondary' }
 
-  subscribeForm = new FormGroup({
-    name: new FormControl(''),
-    lastName: new FormControl(''),
-    email: new FormControl(''),
-    phone: new FormControl(''),
-    cep: new FormControl(''),
-    address: new FormControl(''),
-    neighborhood: new FormControl(''),
-    city: new FormControl(''),
-    complement: new FormControl(''),
-    state: new FormControl(''),
-  })
+subscribeForm = new FormGroup({
+  name: new FormControl(''),
+  lastName: new FormControl(''),
+  email: new FormControl(''),
+  phone: new FormControl(''),
+  cep: new FormControl(''),
+  address: new FormControl(''),
+  neighborhood: new FormControl(''),
+  city: new FormControl(''),
+  complement: new FormControl(''),
+  state: new FormControl(''),
+})
 
-  constructor() { }
+constructor(private cepService: FindCepService, private dropDown: DropDownService) { }
 
-  ngOnInit(): void {
+ngOnInit(): void {
+
+}
+
+findCep(cep: string){
+  console.log(cep)
+  if (cep !== null) {
+    this.cepService.findCep(cep)
+      .subscribe(res => this.fillFormFields(res))
   }
+}
 
-  submitForm(){
-    
-  }
+fillFormFields(cep: any){
+  this.subscribeForm.get('address')?.setValue(cep.logradouro);
+  this.subscribeForm.get('city')?.setValue(cep.localidade);
+  this.subscribeForm.get('state')?.setValue(cep.uf);
+  this.subscribeForm.get('neighborhood')?.setValue(cep.bairro);
+}
+
+submitForm(){
+
+}
 }
