@@ -9,9 +9,7 @@ import { ButtonProps } from 'src/app/types/button/button.types';
 })
 export class SubscribeFormComponent implements OnInit {
 
-  subscribe: ButtonProps = {
-    text: 'Faça sua inscrição', type: 'primary', size: 'xl'
-  }
+  buttonProps: ButtonProps = {text: 'Enviar', type: 'secondary'}
 
   subscribeForm = new FormGroup({
     name: new FormControl(''),

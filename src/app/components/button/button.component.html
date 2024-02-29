@@ -1,3 +1,7 @@
-<button class="button" [class]="[buttonProps.type, buttonProps?.size]">
-  {{buttonProps.text}}
+<button *ngIf="buttonProps.text && buttonProps.type && buttonProps.type !== 'secondary'" [class]="['button', buttonProps.type]">
+  {{ buttonProps.text }}
+</button>
+
+<button *ngIf="buttonProps.text && buttonProps.type == 'secondary'" class="button secondary">
+  {{ buttonProps.text }}
 </button>

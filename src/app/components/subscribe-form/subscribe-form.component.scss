@@ -14,20 +14,27 @@
       }
 
     .form-group{
-        width: 50%;
+        width: 35%;
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
+        margin-top: 2rem;
 
         .input-form{
-            width: 45%;
+            width: 35%;
             padding: 1rem;
+            display: flex;
+            flex-grow: 1;
             border: 1px solid #CBCBCB;
             opacity: 1;
         }
         .input-form::placeholder{
             color: #CBCBCB;
             opacity: 1;
+        }
+
+        .form-button{
+            width: 35%;
         }
     }
 }
