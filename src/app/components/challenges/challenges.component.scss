@@ -18,6 +18,7 @@
       text-transform: uppercase;
       font-size: 3.2rem;
       font-weight: 900;
+      text-align: center;
     }
 
     .subtitle {
@@ -28,14 +29,11 @@
     .challenges-group {
       width: 100%;
       display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
       flex-wrap: wrap;
       margin-top: 2rem;
       gap: 2rem;
 
       .challenge {
-        width: 48%;
         display: flex;
         flex-direction: column;
         gap: 1rem;
@@ -43,39 +41,31 @@
         .challenge-title {
           display: flex;
           align-items: center;
-          font-size: 1.4rem;
           color: rgb(0, 50, 98);
           gap: 1rem;
+
           .icon {
             display: flex;
-            width: 8rem;
+
             .management {
-              width: 8rem;
-              height: 8rem;
               background-image: url("../../../assets/icons/ico_desafio1.svg");
               background-repeat: no-repeat;
               background-size: contain;
             }
 
             .monitoring {
-              width: 8rem;
-              height: 8rem;
               background-image: url("../../../assets/icons/ico_desafio2.svg");
               background-repeat: no-repeat;
               background-size: contain;
             }
 
             .products {
-              width: 8rem;
-              height: 8rem;
               background-image: url("../../../assets/icons/ico_desafio3.svg");
               background-repeat: no-repeat;
               background-size: contain;
             }
 
             .machines {
-              width: 8rem;
-              height: 8rem;
               background-image: url("../../../assets/icons/ico_desafio4.svg");
               background-repeat: no-repeat;
               background-size: contain;
@@ -84,16 +74,16 @@
 
         }
 
-        .challenge-text{
+        .challenge-text {
           display: flex;
           gap: .5rem;
           font-size: 1.2rem;
 
-          .text-icon{
+          .text-icon {
             display: flex;
             width: 1.5rem;
 
-            .arrow-right{
+            .arrow-right {
               width: 1.5rem;
               height: 1.5rem;
               background-image: url("../../../assets/icons/arrow-right.svg");
@@ -105,8 +95,52 @@
       }
     }
   }
-
   .highlight {
     color: rgb(66, 192, 182);
+  }
+}
+
+@media screen and (max-width: 832px) {
+  .challenges-container {
+    .challenges-content {
+      .subtitle{
+        text-align: center;
+      }
+      .challenges-group {
+        align-items: center;
+        justify-content: center;
+        .challenge{
+          width: 90%;
+          .challenge-title{
+            font-size: 1.1rem;
+            .icon, .monitoring, .machines, .products, .management{
+              width: 5rem;
+              height: 5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 833px) {
+  .challenges-container {
+    .challenges-content {
+      .challenges-group {
+        align-items: flex-start;
+        justify-content: space-between;
+        .challenge{
+          width: 48%;
+          .challenge-title{
+            font-size: 1.4rem;
+            .icon, .monitoring, .machines, .products, .management{
+              width: 8rem;
+              height: 8rem;
+            }
+          }
+        }
+      }
+    }
   }
 }
